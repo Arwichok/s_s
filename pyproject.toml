@@ -5,7 +5,10 @@ description = ""
 authors = [
     {name = "Arwichok", email = "arwichok@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "litestar>=2.4.4",
+    "uvicorn>=0.24.0.post1",
+]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +16,6 @@ license = {text = "MIT"}
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
+
+[tool.pdm.scripts]
+start = "litestar run --reload"
